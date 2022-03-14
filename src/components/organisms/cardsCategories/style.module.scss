@@ -1,0 +1,29 @@
+@import '../../../scss/utils/mixins';
+
+.cardsWrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3.125rem;
+
+  @include mmax(1400) {
+    margin-top: 15%;
+  }
+
+  .buttonLoadMore{
+    display: block;
+    z-index: 99999;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 1.25rem calc(1rem * 3.5);
+    background: rgba(19, 17, 29, 0.98);
+    border-radius: 37px;
+
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #848389;
+  }
+}

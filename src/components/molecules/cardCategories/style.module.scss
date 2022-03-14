@@ -1,0 +1,79 @@
+@import '../../../scss/utils/mixins';
+
+a {
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 65px;
+
+  &Container {
+    display: flex;
+    padding: 0.625rem ;
+    padding-bottom: 0;
+    position: relative;
+    width: calc(100% / 4);
+    height: 11.25rem ;
+    overflow: hidden;
+
+    @include link-h {
+      opacity: 0.7;
+    }
+
+    @include mmax(720) {
+      width: calc(100% / 3);
+      height: 15.25rem;
+    }
+
+    @include mmax(540) {
+      width: calc(100% / 2);
+      height: 22.25rem;
+    }
+
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .logo {
+      width: 15%;
+    }
+  }
+
+  &Info,
+  &Content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &Content {
+    width: 100%;
+    padding: 0.6rem;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &Info {
+    color: #F8F8F8;
+    text-transform: uppercase;
+    .title {
+
+      font-weight: 300;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+
+    }
+    .subTitle {
+      width: 50%;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+}
